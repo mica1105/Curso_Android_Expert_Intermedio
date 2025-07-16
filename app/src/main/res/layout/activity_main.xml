@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toobar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavView"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavView"
@@ -48,6 +48,7 @@
         app:itemIconTint="@color/botton_nav_selector"
         app:itemTextColor="@color/botton_nav_selector"
         app:itemActiveIndicatorStyle="@null"
+        app:itemIconSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
