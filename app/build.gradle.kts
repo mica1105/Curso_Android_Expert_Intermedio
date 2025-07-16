@@ -22,12 +22,17 @@ android {
     }
 
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "BASE_URL", "\"https://newastro.vercel.app/\"")
+        }
+        getByName("debug") {
+            isDebuggable= true
+            buildConfigField("String", "BASE_URL", "\"https://newastro-debug.vercel.app/\"")
         }
     }
     compileOptions {
@@ -40,6 +45,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -56,6 +62,12 @@ dependencies {
     //DaggerHilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
+
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.okhttp3.logging.interceptor)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
