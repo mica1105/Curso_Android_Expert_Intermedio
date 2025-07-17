@@ -54,7 +54,6 @@
             android:id="@+id/ivLuckyCard"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -75,16 +74,16 @@
 
         <TextView
             android:id="@+id/tvShare"
+            style="@style/Body"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/share"
-            android:gravity="center"
             android:layout_marginBottom="16dp"
-            style="@style/Body"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:text="@string/share"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLucky"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLucky" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
