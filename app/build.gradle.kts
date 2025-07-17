@@ -68,6 +68,14 @@ dependencies {
     implementation(libs.retrofit.converter.gson)
     implementation(libs.okhttp3.logging.interceptor)
 
+    //Camera X
+    implementation(libs.camera.camera2)
+    implementation(libs.camera.lifecycle)
+    implementation(libs.camera.view)
+    implementation(libs.camera.core)
+    implementation(libs.camera.extension)
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
